@@ -37,6 +37,9 @@ RSpec.describe 'Index page', type: :feature do
     expect(page).to have_css('.items-center')
     expect(page).to have_css('.justify-between')
     expect(page).to have_css('.gap-3')
+    expect(page).to have_css('.text-4xl')
+    expect(page).to have_css('.font-bold')
+    expect(page).to have_css('.text-gray-800')
   end
 
   it 'will go to new appointment page when click on link "New appointment"' do
