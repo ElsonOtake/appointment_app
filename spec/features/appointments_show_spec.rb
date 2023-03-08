@@ -15,7 +15,7 @@ RSpec.describe 'Show page', type: :feature do
     expect(page).to have_content(Date.today.to_s)
   end
 
-  it 'will have link to "Back to appointments"' do
+  it 'will have link to "Back to appointments" and "Edit"' do
     visit appointment_path(@appointment)
     expect(page).to have_link('Back to appointments')
     expect(page).to have_link('Edit')
@@ -42,5 +42,11 @@ RSpec.describe 'Show page', type: :feature do
     visit appointment_path(@appointment)
     click_link 'Back to appointments'
     expect(current_path).to eq(appointments_path)
+  end
+
+  it 'will go to edit appointment page when click on link "Edit"' do
+    visit appointment_path(@appointment)
+    click_link 'Edit'
+    expect(current_path).to eq(edit_appointment_path(@appointment))
   end
 end
