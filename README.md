@@ -40,6 +40,7 @@ A Single-Page Application where a user can pick a date and book an appointment.
 <details>
   <summary>Server</summary>
   <ul>
+    <li><a href="https://github.com/hotwired/turbo-rails">Turbo Rails</a></li>
     <li><a href="https://github.com/rspec/rspec-rails">RSpec Rails</a></li>
   </ul>
 </details>
@@ -55,7 +56,7 @@ A Single-Page Application where a user can pick a date and book an appointment.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://appointment.onrender.com)
+- [Live Demo Link](https://elsonotake-appointment.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,6 +96,17 @@ using GitHub CLI:
 
 ### Install <a name="install"></a>
 
+Create a .env file:
+```sh
+  touch .env
+```
+
+Fill in your PostgreSQL credentials in the .env file:
+```sh
+DATABASE_USERNAME=<PostgreSQL username>
+DATABASE_PASSWORD=<PostgreSQL password>
+```
+
 Install this project with:
 ```sh
   bundle install
@@ -106,7 +118,7 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
-  bin/dev
+  rails server
 ```
 Open `http://localhost:3000/` on your browser.
 

@@ -8,7 +8,6 @@ RSpec.describe 'Edit page', type: :feature do
   it 'will present edit appointment page' do
     visit "/appointments/#{@appointment.id}/edit"
     expect(current_path).to eq(edit_appointment_path(@appointment))
-    print page.body
   end
 
   it 'will have page content' do
