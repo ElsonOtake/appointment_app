@@ -8,7 +8,7 @@
 
   </div>
   
-  <%= turbo_frame_tag "new_appointment" do %>
+  <%= turbo_frame_tag @appointment do %>
   
     <%= render "form", appointment: @appointment %>
   
