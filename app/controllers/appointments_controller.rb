@@ -51,7 +51,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to appointments_url, notice: 'Appointment was successfully destroyed.' }
-      format.json { head :no_content }
+      format.turbo_stream
     end
   end
 
