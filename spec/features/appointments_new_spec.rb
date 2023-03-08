@@ -17,6 +17,11 @@ RSpec.describe 'New page', type: :feature do
     expect(page).to have_link('Cancel')
   end
 
+  it 'will not have a "Delete" button' do
+    visit new_appointment_path
+    expect(page).to_not have_button('Delete')
+  end
+
   it 'will have Tailwind classes' do
     visit new_appointment_path
     expect(page).to have_css('.w-full')
