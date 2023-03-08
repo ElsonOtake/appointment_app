@@ -8,6 +8,10 @@
 
   </div>
 
-  <%= render "form", appointment: @appointment %>
+  <%= turbo_frame_tag "appointment_#{@appointment.id}" do %>
+    
+    <%= render "form", appointment: @appointment %>
+
+  <% end %>
   
 </main>
