@@ -1,0 +1,40 @@
+<%= form_with(model: appointment) do |form| %>
+
+  <% if appointment.errors.any? %>
+
+    <div class="w-full text-hue-2 bg-hue-1 p-2 rounded-md text-red-500">
+
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+        <% appointment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+
+    </div>
+
+  <% end %>
+
+  <div class="flex justify-between items-center gap-3 bg-white rounded-md shadow-sm mb-4 p-2">
+
+    <%= form.date_field :booking %>
+
+    <div class="flex flex-nowrap gap-2">
+
+      <%= link_to "Cancel",
+        appointments_path,
+        class: "inline-block px-4 py-3 rounded-lg bg-transparent bg-origin-border border-solid border-2 border-transparent 
+              font-bold text-decoration-none cursor-pointer outline-none text-gray-900 bg-gray-200" 
+      %>
+
+      <%= form.submit class: "inline-block px-4 py-3 rounded-lg bg-transparent bg-origin-border border-solid border-2 
+                            border-transparent font-bold text-decoration-none cursor-pointer outline-none 
+                            bg-gradient-to-r from-teal-500 to-teal-600 text-white" 
+      %>
+
+    </div>
+
+  </div>
+
+<% end %>

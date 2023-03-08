@@ -1,0 +1,25 @@
+<main class="w-full px-2 mx-auto md:px-4 md:max-w-2xl">
+
+  <div class="flex flex-wrap items-center justify-between gap-3 md:gap-4 mt-4 mb-6 md:mb-8">
+    
+    <h1 class="text-4xl font-bold text-gray-800">Appointments</h1>
+
+    <%= link_to "New appointment",
+                new_appointment_path,
+                data: { turbo_frame: dom_id(Appointment.new) },
+                class: "inline-block px-4 py-3 rounded-lg bg-transparent bg-origin-border border-solid border-2 
+                        border-transparent font-bold text-decoration-none cursor-pointer outline-none 
+                        bg-gradient-to-r from-teal-500 to-teal-600 text-white"
+    %>
+
+  </div>
+
+  <%= turbo_frame_tag Appointment.new %>
+
+  <%= turbo_frame_tag "appointments" do %>
+  
+    <%= render @appointments %>
+
+  <% end %>
+
+</main>
