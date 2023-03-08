@@ -1,9 +1,13 @@
-<h1>New appointment</h1>
+<main class="w-full px-2 mx-auto md:px-4 md:max-w-2xl">
 
-<%= render "form", appointment: @appointment %>
-
-<br>
-
-<div>
   <%= link_to "Back to appointments", appointments_path %>
-</div>
+
+  <div class="flex flex-wrap items-center justify-between gap-3 md:gap-4 mt-4 mb-6 md:mb-8">
+
+    <h1>New appointment</h1>
+
+  </div>
+  
+  <%= render "form", appointment: @appointment %>
+  
+</main>
