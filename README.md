@@ -34,6 +34,7 @@ A Single-Page Application where a user can pick a date and book an appointment.
   <summary>Client</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
   </ul>
 </details>
 
