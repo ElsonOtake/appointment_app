@@ -3,5 +3,5 @@ class Appointment < ApplicationRecord
 
   scope :ordered, -> { order(id: :desc) }
 
-  broadcasts_to ->(appointment) { 'appointments' }, inserts_by: :prepend
+  broadcasts_to ->(_appointment) { 'appointments' }, inserts_by: :prepend
 end
