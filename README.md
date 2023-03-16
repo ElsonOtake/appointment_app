@@ -43,6 +43,7 @@ A Single-Page Application where a user can pick a date and book an appointment.
   <ul>
     <li><a href="https://github.com/hotwired/turbo-rails">Turbo Rails</a></li>
     <li><a href="https://github.com/rspec/rspec-rails">RSpec Rails</a></li>
+    <li><a href="https://redis.io/">Redis</a></li>
   </ul>
 </details>
 
@@ -72,6 +73,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 [Ruby](https://www.ruby-lang.org/en/)
+[Redis](https://redis.io/)
 
 ### Setup <a name="setup"></a>
 
@@ -119,9 +121,17 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
+  redis-server
+```
+
+In another terminal run
+
+```sh
   rails server
 ```
 Open `http://localhost:3000/` on your browser.
+
+Open the same address in another browser to check for real-time updates on the web page.
 
 ### Run tests <a name="run-tests"></a>
 
